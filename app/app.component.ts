@@ -1,8 +1,20 @@
 import { Component } from '@angular/core';
 
-@Component({
-    selector: 'my-app',
-    template: '<h1>Skeleton Project</h1>'
-})
+import { Task } from './model/task';
 
-export class AppComponent { }
+@Component({
+    moduleId: module.id,
+    selector: 'my-app',
+    templateUrl: 'app.component.html',
+    styleUrls: [ 'app.component.css' ]
+})
+export class AppComponent {
+    private tasks: Task[] = [];
+    private currentTask = new Task(null, false, false);
+
+    addTask() {
+        let task = new Task(this.currentTask.content, this.currentTask.completed, this.currentTask.hidden);
+        this.tasks.push(task);
+        this.currentTask.content = null;
+    }
+}

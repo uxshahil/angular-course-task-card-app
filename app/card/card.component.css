@@ -1,0 +1,31 @@
+.container {
+    margin-bottom: 0.5rem;
+}
+.card {
+    border-radius: 0;
+    padding: 1rem;
+    cursor: pointer;
+}
+.card-block p i {
+    margin-left: 0.5rem;
+    color: red;
+}
+.card,
+.card-footer {
+    background-color: #FFFFA5;
+    border: none;
+}
+.card.completed, 
+.card.completed .card-footer,
+.card.completed i {
+    background-color: #EEE;
+    color: #CCC;
+}
+.card-footer {
+    text-align: right;
+    padding: 0;
+}
+i {
+    color: #CC0000;
+    padding-right: .5rem;
+}

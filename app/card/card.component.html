@@ -1,0 +1,11 @@
+<div *ngIf="!task.hidden" class="container">
+    <div class="card" (click)="statusToggle()" [class.completed]="task.completed">
+        <div class="card-block">
+            <p>{{ task.content }}<i class="fa fa-trash" (click)="hideTask()" aria-hidden="true"></i></p>
+        </div>
+        <div class="card-footer">
+            <span *ngIf="!task.completed"><i class="fa fa-times" aria-hidden="true"></i>Not Complete</span>
+            <span [hidden]="!task.completed"><i class="fa fa-check" aria-hidden="true"></i>Completed</span>
+        </div>
+    </div>
+</div>
